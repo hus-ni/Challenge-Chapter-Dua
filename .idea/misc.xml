@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_bayar_16.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_bayar_24.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_bayar_32.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_dummy.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_isi_saldo_16.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_rocket_explore.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_rocket_explore_16.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/shape_balance_gojek.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/shape_balance_icon_gojek.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/layout/activity_gojek_challenge.xml" value="0.2" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/useful/KAMPUS_MERDEKA/Binar/Materi/Chapter2/ChallengeChapterDua/app/src/main/res/drawable/ic_account_48.xml" value="0.1885" />
+        <entry key="..\:/useful/KAMPUS_MERDEKA/Binar/Materi/Chapter2/ChallengeChapterDua/app/src/main/res/drawable/shape_root_layout.xml" value="0.1885" />
+        <entry key="..\:/useful/KAMPUS_MERDEKA/Binar/Materi/Chapter2/ChallengeChapterDua/app/src/main/res/drawable/shape_search_bar_gojek.xml" value="0.1885" />
+        <entry key="..\:/useful/KAMPUS_MERDEKA/Binar/Materi/Chapter2/ChallengeChapterDua/app/src/main/res/layout/activity_gojek_challenge.xml" value="0.264" />
+        <entry key="..\:/useful/KAMPUS_MERDEKA/Binar/Materi/Chapter2/ChallengeChapterDua/app/src/main/res/layout/activity_main.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

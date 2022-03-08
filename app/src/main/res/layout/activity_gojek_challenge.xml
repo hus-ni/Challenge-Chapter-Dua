@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GojekChallenge">
+    <!--toolbar guidline-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+    <!--toolbar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/ijo_gojek"
+        app:layout_constraintBottom_toTopOf="@id/guideline_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/view_search_bar"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/shape_search_bar_gojek"
+            android:iconifiedByDefault="false"
+            android:queryHint="@string/search_hint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_account_gojek"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/button_account_gojek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/ijo_gojek"
+            android:contentDescription="@string/condesc_account_gojek"
+            android:src="@drawable/ic_account_48"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_gojek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--body-->
+    <ScrollView
+        android:id="@+id/scroll_body_gojek"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_balance"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/shape_balance_gojek"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!--rencananya slider-->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_balance_slider"
+                    android:layout_width="160dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!--isi slider-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/image_icon_bayar"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="18dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/shape_balance_icon_gojek"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_bayar_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/image_icon_isi_saldo"
+                    app:layout_constraintStart_toEndOf="@id/constraint_balance_slider"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/biruu_gojek" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/string_bayar"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/image_icon_bayar"
+                    app:layout_constraintStart_toStartOf="@id/image_icon_bayar"
+                    app:layout_constraintTop_toBottomOf="@id/image_icon_bayar" />
+
+                <ImageView
+                    android:id="@+id/image_icon_isi_saldo"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="18dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/shape_balance_icon_gojek"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_isi_saldo_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/image_icon_explore"
+                    app:layout_constraintStart_toEndOf="@id/image_icon_bayar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/biruu_gojek" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/string_isi_saldo"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/image_icon_isi_saldo"
+                    app:layout_constraintStart_toStartOf="@id/image_icon_isi_saldo"
+                    app:layout_constraintTop_toBottomOf="@id/image_icon_isi_saldo" />
+
+                <ImageView
+                    android:id="@+id/image_icon_explore"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginBottom="18dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/shape_balance_icon_gojek"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_rocket_explore_16"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/image_icon_isi_saldo"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/biruu_gojek" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/string_eksplor"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@id/image_icon_explore"
+                    app:layout_constraintStart_toStartOf="@id/image_icon_explore"
+                    app:layout_constraintTop_toBottomOf="@id/image_icon_explore" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintGuide_percent="0.34"
+                />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/constraint_balance"
+                app:layout_constraintStart_toStartOf="@id/constraint_balance"
+                android:src="@drawable/ic_dummy"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

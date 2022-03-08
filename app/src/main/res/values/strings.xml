@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Challenge Chapter Dua</string>
+    <string name="gojek_atau_tokped">Disini nanti tempat untuk memilih tampilan Gojek atau Tokopedia</string>
+    <string name="condesc_account_gojek">Tombol Account Gojek</string>
+    <string name="search_hint">Cari layanan, makanan, &amp; tujuan</string>
+    <string name="string_bayar">Bayar</string>
+    <string name="string_eksplor">Eksplor</string>
+    <string name="string_isi_saldo">Isi Saldo</string>
+</resources>
