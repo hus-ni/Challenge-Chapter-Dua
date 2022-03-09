@@ -11,4 +11,6 @@
     <color name="biruu_gojek">#0081a0</color>
     <color name="buabu_icon_balance_gojek">#606060</color>
     <color name="oren_harta_karun_gojek">#FFD4A7</color>
+    <color name="garis_akses_cepat">#efefef</color>
+    <color name="buabu_navbar">#a0a0a0</color>
 </resources>

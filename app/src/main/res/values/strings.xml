@@ -20,8 +20,8 @@
     <string name="text_diskon_akses_cepat">Ada voucher nganggur, nih!</string>
     <string name="text_restoran_akses_cepat">Restoran Terdekat</string>
     <string name="text_iklan">"<b>Festival idaman Perempuan!</b> \nTemukan kebutuhan cantik-mu hemat pakai GoPay dengan cashback 50%. Klik!"</string>
-    <string name="text_balance_nominal"><b>Rp109.048</b>\n<font color='#BB01A512'>Klik &amp; cek riwayat</font></string>
-    <string name="text_judul_nominal_balance">gopay</string>
+    <string name="text_gopay_balance_value"><b>Rp109.048</b>\n<font color='#BB01A512'>Klik &amp; cek riwayat</font></string>
+    <string name="text_gopay_balance_judul">gopay</string>
     <string name="cd_icon_gopay">icon gopay</string>
     <string name="cd_icon_bayar">icon bayar</string>
     <string name="cd_icon_isi_saldo">icon isi saldo</string>
@@ -42,4 +42,18 @@
     <string name="cd_icon_restoran_akses_cepat">icon restoran akses cepat</string>
     <string name="cd_icon_panah_akses_cepat_2">icon panah akses cepat 2</string>
     <string name="cd_gambar_iklan">gambar iklan</string>
+    <string name="text_navbar_home">Home</string>
+    <string name="text_navbar_promo">Promo</string>
+    <string name="text_navbar_pesanan">Pesanan</string>
+    <string name="text_navbar_chat">Chat</string>
+    <string name="cd_icon_home_navbar">icon home navbar</string>
+    <string name="cd_icon_promo_navbar">icon promo navbar</string>
+    <string name="cd_icon_pesanan_navbar">icon pesanan navbar</string>
+    <string name="cd_icon_chat_navbar">icon chat navbar</string>
+    <string name="cd_icon_paylater">icon paylater</string>
+    <string name="text_gopaylater_balance_judul">gopaylater</string>
+    <string name="text_gopaylater_balance_value">Activate GoPaylater!\n<font color="#BB01A512">Tap to activate</font></string>
+    <string name="cd_icon_gocoins">icon gocoins</string>
+    <string name="text_gopay_coins_balance_judul"><b>gopay</b> coins</string>
+    <string name="text_gocoins_balance_value"><b>0</b>\n<font color="#BB01A512">Tap for details</font></string>
 </resources>

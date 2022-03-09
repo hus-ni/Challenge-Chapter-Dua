@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GojekChallenge">
-    <!--toolbar guidline-->
+    <!--toolbar guideline-->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_toolbar"
         android:layout_width="0dp"
@@ -15,6 +14,7 @@
         app:layout_constraintGuide_percent="0.08" />
     <!--toolbar-->
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_toolbar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/ijo_gojek"
@@ -51,20 +51,13 @@
             app:layout_constraintStart_toEndOf="@id/view_search_bar"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!--        <androidx.appcompat.widget.Toolbar-->
-        <!--            android:id="@+id/toolbar_gojek"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toTopOf="parent" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!--body-->
     <ScrollView
         android:id="@+id/scroll_body_gojek"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline_navbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline_toolbar">
@@ -72,7 +65,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="12dp">
             <!--menu balance-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint_balance"
@@ -85,57 +78,164 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <!--rencananya slider-->
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/constraint_balance_slider"
+                <!--rencananya scrollview + padding -->
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nested_scroll_balance"
                     android:layout_width="160dp"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp"
-                    android:background="@drawable/shape_balance_nominal"
+                    android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/constraint_menu_balance"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
-                    <!--pengennya slider-->
-                    <ImageView
-                        android:id="@+id/image_icon_judul_balance_nominal"
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:layout_marginStart="12dp"
-                        android:contentDescription="@string/cd_icon_gopay"
-                        android:src="@drawable/ic_icon_gopay"
-                        app:layout_constraintBottom_toBottomOf="@+id/text_judul_balance_nominal"
-                        app:layout_constraintStart_toStartOf="parent" />
 
-                    <TextView
-                        android:id="@+id/text_judul_balance_nominal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/text_judul_nominal_balance"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@id/text_balance_nominal"
-                        app:layout_constraintStart_toEndOf="@id/image_icon_judul_balance_nominal"
-                        app:layout_constraintTop_toTopOf="parent" />
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <!--gocoins-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraint_balance_gocoins"
+                            android:layout_width="match_parent"
+                            android:layout_height="64dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/shape_balance_gopay"
+                            app:layout_constraintBottom_toTopOf="@id/constraint_balance_paylater"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+                            <!--pengennya slider, tapi pake scrollview + padding aja deh-->
+                            <ImageView
+                                android:id="@+id/image_icon_judul_balance_gocoins"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="12dp"
+                                android:contentDescription="@string/cd_icon_gocoins"
+                                android:src="@drawable/ic_icon_gocoins"
+                                app:layout_constraintBottom_toBottomOf="@+id/text_judul_balance_gocoins"
+                                app:layout_constraintStart_toStartOf="parent" />
 
-                    <TextView
-                        android:id="@+id/text_balance_nominal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/text_balance_nominal"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                            <TextView
+                                android:id="@+id/text_judul_balance_gocoins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="@string/text_gopay_coins_balance_judul"
+                                android:textSize="18sp"
+                                app:layout_constraintBottom_toTopOf="@id/text_balance_gocoins"
+                                app:layout_constraintStart_toEndOf="@id/image_icon_judul_balance_gocoins"
+                                app:layout_constraintTop_toTopOf="parent" />
 
+                            <TextView
+                                android:id="@+id/text_balance_gocoins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/text_gocoins_balance_value"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/text_judul_balance_gocoins" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <!--paylater-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraint_balance_paylater"
+                            android:layout_width="match_parent"
+                            android:layout_height="64dp"
+                            android:layout_marginStart="12dp"
+                            android:background="@drawable/shape_balance_gopay"
+                            app:layout_constraintBottom_toTopOf="@id/constraint_balance_gopay"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/constraint_balance_gocoins"
+                            app:layout_constraintEnd_toEndOf="parent">
+                            <!--pengennya slider, tapi pake scrollview + padding aja deh-->
+                            <ImageView
+                                android:id="@+id/image_icon_judul_balance_paylater"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="12dp"
+                                android:contentDescription="@string/cd_icon_paylater"
+                                android:src="@drawable/ic_icon_paylater"
+                                app:layout_constraintBottom_toBottomOf="@+id/text_judul_balance_paylater"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/text_judul_balance_paylater"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="@string/text_gopaylater_balance_judul"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@id/text_balance_paylater"
+                                app:layout_constraintStart_toEndOf="@id/image_icon_judul_balance_paylater"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/text_balance_paylater"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/text_gopaylater_balance_value"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/text_judul_balance_paylater" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                        <!--gopay-->
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraint_balance_gopay"
+                            android:layout_width="match_parent"
+                            android:layout_height="64dp"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:background="@drawable/shape_balance_gopay"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/constraint_balance_paylater"
+                            app:layout_constraintEnd_toEndOf="parent">
+                            <!--pengennya slider, tapi pake scrollview + padding aja deh-->
+                            <ImageView
+                                android:id="@+id/image_icon_judul_balance_gopay"
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="12dp"
+                                android:contentDescription="@string/cd_icon_gopay"
+                                android:src="@drawable/ic_icon_gopay"
+                                app:layout_constraintBottom_toBottomOf="@+id/text_judul_balance_gopay"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/text_judul_balance_gopay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="@string/text_gopay_balance_judul"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@id/text_balance_gopay"
+                                app:layout_constraintStart_toEndOf="@id/image_icon_judul_balance_gopay"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/text_balance_gopay"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/text_gopay_balance_value"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/text_judul_balance_gopay" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.core.widget.NestedScrollView>
+                <!--menu balance-->
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint_menu_balance"
                     android:layout_width="0dp"
                     android:layout_height="52dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/constraint_balance_slider"
+                    app:layout_constraintStart_toEndOf="@id/nested_scroll_balance"
                     app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
@@ -580,10 +680,9 @@
                         android:id="@+id/view_garis_akses_cepat"
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
-                        android:background="#efefef"
+                        android:background="@color/garis_akses_cepat"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_weight="1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -627,7 +726,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraint_iklan"
                 android:layout_width="match_parent"
-                android:layout_height="192dp"
+                android:layout_height="254dp"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="12dp"
@@ -639,24 +738,22 @@
                 <ImageView
                     android:id="@+id/image_iklan"
                     android:layout_width="0dp"
-                    android:layout_height="144dp"
+                    android:layout_height="0dp"
                     android:background="@drawable/shape_gambar_iklan"
-                    android:clipToOutline="true"
                     android:contentDescription="@string/cd_gambar_iklan"
-                    android:padding="2dp"
                     android:scaleType="center"
                     android:src="@drawable/test_iklan"
                     app:layout_constraintBottom_toTopOf="@id/text_iklan"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:targetApi="s" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/text_iklan"
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_margin="12dp"
+
                     android:text="@string/text_iklan"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -672,4 +769,115 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.92" />
+    <!--navbar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_navbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_navbar">
+
+        <ImageButton
+            android:id="@+id/image_navbar_home"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_icon_home_navbar"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_home"
+            app:layout_constraintBottom_toTopOf="@id/text_navbar_home"
+            app:layout_constraintEnd_toStartOf="@id/image_navbar_promo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_navbar_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/text_navbar_home"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_navbar_home"
+            app:layout_constraintStart_toStartOf="@id/image_navbar_home"
+            app:layout_constraintTop_toBottomOf="@id/image_navbar_home" />
+
+        <ImageButton
+            android:id="@+id/image_navbar_promo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_icon_promo_navbar"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_diskon_akses_cepat"
+            app:layout_constraintBottom_toTopOf="@id/text_navbar_promo"
+            app:layout_constraintEnd_toStartOf="@id/image_navbar_pesanan"
+            app:layout_constraintStart_toEndOf="@id/image_navbar_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/buabu_navbar" />
+
+        <TextView
+            android:id="@+id/text_navbar_promo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/text_navbar_promo"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_navbar_promo"
+            app:layout_constraintStart_toStartOf="@id/image_navbar_promo"
+            app:layout_constraintTop_toBottomOf="@id/image_navbar_promo" />
+
+        <ImageButton
+            android:id="@+id/image_navbar_pesanan"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_icon_pesanan_navbar"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_pesanan"
+            app:layout_constraintBottom_toTopOf="@id/text_navbar_pesanan"
+            app:layout_constraintEnd_toStartOf="@id/image_navbar_chat"
+            app:layout_constraintStart_toEndOf="@id/image_navbar_promo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_navbar_pesanan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/text_navbar_pesanan"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_navbar_pesanan"
+            app:layout_constraintStart_toStartOf="@id/image_navbar_pesanan"
+            app:layout_constraintTop_toBottomOf="@id/image_navbar_pesanan" />
+
+        <ImageButton
+            android:id="@+id/image_navbar_chat"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_icon_chat_navbar"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_navbar_chat"
+            app:layout_constraintBottom_toTopOf="@id/text_navbar_chat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_navbar_pesanan"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_navbar_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/text_navbar_chat"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_navbar_chat"
+            app:layout_constraintStart_toStartOf="@id/image_navbar_chat"
+            app:layout_constraintTop_toBottomOf="@id/image_navbar_chat" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
