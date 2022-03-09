@@ -6,4 +6,12 @@
     <string name="string_bayar">Bayar</string>
     <string name="string_eksplor">Eksplor</string>
     <string name="string_isi_saldo">Isi Saldo</string>
+    <string name="text_goride">GoRide</string>
+    <string name="text_gocar">GoCar</string>
+    <string name="text_gofood">GoFood</string>
+    <string name="text_gosend">GoSend</string>
+    <string name="text_gomart">GoMart</string>
+    <string name="text_gopulsa">GoPulsa</string>
+    <string name="text_check_in">Check in</string>
+    <string name="text_lainnya">Lainnya</string>
 </resources>
