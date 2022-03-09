@@ -14,4 +14,32 @@
     <string name="text_gopulsa">GoPulsa</string>
     <string name="text_check_in">Check in</string>
     <string name="text_lainnya">Lainnya</string>
+    <string name="text_info_harta_karun_atas">193 XP lagi ada harta karun</string>
+    <string name="text_info_harta_karun_bawah">Harta Karun bentar lagi hilang</string>
+    <string name="text_judul_akses_cepat">Akses Cepat</string>
+    <string name="text_diskon_akses_cepat">Ada voucher nganggur, nih!</string>
+    <string name="text_restoran_akses_cepat">Restoran Terdekat</string>
+    <string name="text_iklan">"<b>Festival idaman Perempuan!</b> \nTemukan kebutuhan cantik-mu hemat pakai GoPay dengan cashback 50%. Klik!"</string>
+    <string name="text_balance_nominal"><b>Rp109.048</b>\n<font color='#BB01A512'>Klik &amp; cek riwayat</font></string>
+    <string name="text_judul_nominal_balance">gopay</string>
+    <string name="cd_icon_gopay">icon gopay</string>
+    <string name="cd_icon_bayar">icon bayar</string>
+    <string name="cd_icon_isi_saldo">icon isi saldo</string>
+    <string name="cd_icon_eksplor">icon eksplor</string>
+    <string name="cd_icon_goride">icon goride</string>
+    <string name="cd_icon_gocar">icon gocar</string>
+    <string name="cd_icon_gofood">icon gofood</string>
+    <string name="cd_icon_gosend">icon gosend</string>
+    <string name="cd_icon_gomart">icon gomart</string>
+    <string name="cd_icon_gopulsa">icon gopulsa</string>
+    <string name="cd_icon_peduli_lindungi">icon peduli lindungi</string>
+    <string name="cd_icon_lainnya">icon lainnya</string>
+    <string name="cd_icon_bintang_club">icon bintang club</string>
+    <string name="cd_icon_jam_pasir_club">icon jam pasir club</string>
+    <string name="cd_icon_panah_club">icon panah club</string>
+    <string name="cd_icon_diskon_akses_cepat">icon diskon akses cepat</string>
+    <string name="cd_icon_panah_akses_cepat">icon panah akses cepat</string>
+    <string name="cd_icon_restoran_akses_cepat">icon restoran akses cepat</string>
+    <string name="cd_icon_panah_akses_cepat_2">icon panah akses cepat 2</string>
+    <string name="cd_gambar_iklan">gambar iklan</string>
 </resources>
