@@ -56,4 +56,35 @@
     <string name="cd_icon_gocoins">icon gocoins</string>
     <string name="text_gopay_coins_balance_judul"><b>gopay</b> coins</string>
     <string name="text_gocoins_balance_value"><b>0</b>\n<font color="#BB01A512">Tap for details</font></string>
+    <string name="text_dummy">dummy</string>
+    <string name="cd_icon_toolbar">icon toolbar</string>
+    <string name="text_alamat_toolbar">Dikirim ke <b>Alamat Rumah Muhammad Husni Abdillah</b></string>
+    <string name="text_wallet_balance"><b>Rp109.048</b>\n164.433 Coins</string>
+    <string name="text_tokped_member_balance"><b>Member Gold</b>\n23 Kupon</string>
+    <string name="text_main_menu_official">Official\nStore</string>
+    <string name="text_main_menu_lihat_semua">Lihat\nSemua</string>
+    <string name="text_main_menu_kebutuhan_harian">Kebutuhan\nHarian</string>
+    <string name="text_main_menu_elektronik">Elektronik\n&amp; gadget</string>
+    <string name="text_main_menu_bills">Top-up &amp;\nTagihan</string>
+    <string name="text_main_menu_keuangan">Keuangan\n</string>
+    <string name="text_main_menu_travel">Alat Tulis\n Kantor</string>
+    <string name="text_main_menu_atk">Alat Tulis\n Kantor</string>
+    <string name="text_submenu_pedulilindungi">Peduli\nLindungi</string>
+    <string name="text_submenu_banggalokal">Bangga\nLokal</string>
+    <string name="text_submenu_bazar">Bazar Hari\n ini</string>
+    <string name="text_submenu_liveshop">Live\nShopping</string>
+    <string name="text_submenu_tokpedseru">Tokopedia\nSeru</string>
+    <string name="text_submenu_cod">Bayar di\ntempat</string>
+    <string name="text_submenu_promosekitar">Promo di\nMalang</string>
+    <string name="text_judul_livevideo_ijo"><font color="#63CF6A">Lihat Semua</font></string>
+    <string name="text_judul_livevideo">Video menarik untukmu</string>
+    <string name="text_tokped_navbar_home">Home</string>
+    <string name="text_navbar_tokped_feed">Feed</string>
+    <string name="text_navbar_officialstore">Official Store</string>
+    <string name="text_tokped_navbar_wishlist">Wishlist</string>
+    <string name="text_navbar_tokped_transaksi">Transaksi</string>
+    <string name="cd_icon_main_menu">icon main menu</string>
+    <string name="cd_icon_sub_menu">icon sub menu</string>
+    <string name="cd_gambar_live_video">gambar live video</string>
+    <string name="cd_icon_navbar">icon navbar</string>
 </resources>

@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TokopediaChallenge">
+    <!--guideline toolbar-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.13" />
+    <!--toolbar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/tokped_shape_toolbar"
+        app:layout_constraintBottom_toTopOf="@id/guideline_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <SearchView
+            android:id="@+id/search_toolbar"
+            android:layout_width="232dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/tokped_shape_search_toolbar"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="Cari ayang"
+            app:layout_constraintBottom_toTopOf="@id/text_alamat_toolbar"
+            app:layout_constraintEnd_toStartOf="@id/message_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/message_toolbar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_icon_toolbar"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_tokped_message"
+            app:layout_constraintBottom_toBottomOf="@id/search_toolbar"
+            app:layout_constraintEnd_toStartOf="@id/notification_toolbar"
+            app:layout_constraintStart_toEndOf="@id/search_toolbar"
+            app:layout_constraintTop_toTopOf="@id/search_toolbar" />
+
+        <ImageButton
+            android:id="@+id/notification_toolbar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_icon_toolbar"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_tokped_notification"
+            app:layout_constraintBottom_toBottomOf="@id/search_toolbar"
+            app:layout_constraintEnd_toEndOf="@id/cart_toolbar"
+            app:layout_constraintStart_toEndOf="@id/message_toolbar"
+            app:layout_constraintTop_toTopOf="@id/search_toolbar" />
+
+        <ImageButton
+            android:id="@+id/cart_toolbar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_icon_toolbar"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_tokped_cart"
+            app:layout_constraintBottom_toBottomOf="@id/search_toolbar"
+            app:layout_constraintEnd_toStartOf="@id/menu_toolbar"
+            app:layout_constraintStart_toEndOf="@id/notification_toolbar"
+            app:layout_constraintTop_toTopOf="@id/search_toolbar" />
+
+        <ImageButton
+            android:id="@+id/menu_toolbar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cd_icon_toolbar"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_tokped_menu"
+            app:layout_constraintBottom_toBottomOf="@id/search_toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cart_toolbar"
+            app:layout_constraintTop_toTopOf="@id/search_toolbar" />
+
+        <TextView
+            android:id="@+id/text_alamat_toolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="35dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/text_alamat_toolbar"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:drawableEndCompat="@drawable/ic_tokped_arrow_down"
+            app:drawableStartCompat="@drawable/ic_tokped_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/search_toolbar"
+            app:layout_constraintTop_toBottomOf="@id/search_toolbar" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--balance-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview_balance"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/guideline_toolbar"
+        app:layout_constraintEnd_toEndOf="@id/constraint_toolbar"
+        app:layout_constraintStart_toStartOf="@id/constraint_toolbar"
+        app:layout_constraintTop_toBottomOf="@id/guideline_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp">
+
+            <TextView
+                android:id="@+id/text_wallet_balance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/text_wallet_balance"
+                app:drawableStartCompat="@drawable/ic_tokped_wallet_balance"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_membership_balance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_membership_balance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:text="@string/text_tokped_member_balance"
+                app:drawableStartCompat="@drawable/ic_tokped_gold_member"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_wallet_balance"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    <!--scrollview body-->
+    <ScrollView
+        android:id="@+id/scrollview_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/guideline_navbar"
+        app:layout_constraintTop_toBottomOf="@id/guideline_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp">
+            <!--main menu-->
+            <HorizontalScrollView
+                android:id="@+id/horizontal_main_menu"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal_iklan"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <!--official store-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_official"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="15dp"
+                        android:contentDescription="@string/cd_icon_main_menu"
+                        android:src="@drawable/ic_tokped_official_store"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_official"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_lihatsemua"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_official"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_main_menu_official"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_official"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_official"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_official" />
+
+                    <!--lihat semua-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_lihatsemua"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_main_menu"
+                        android:src="@drawable/ic_tokped_lihat_semua"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_lihatsemua"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_kebutuhanharian"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_official"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_lihatsemua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_main_menu_lihat_semua"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_lihatsemua"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_lihatsemua"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_lihatsemua" />
+
+                    <!--Kebutuhan Harian-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_kebutuhanharian"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_main_menu"
+                        android:src="@drawable/ic_tokped_kebutuhan_harian"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_kebutuhanharian"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_elektronik"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_lihatsemua"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_kebutuhanharian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_main_menu_kebutuhan_harian"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_kebutuhanharian"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_kebutuhanharian"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_kebutuhanharian" />
+
+                    <!--Elektronik-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_elektronik"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_main_menu"
+                        android:src="@drawable/ic_tokped_elektronik"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_elektronik"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_bills"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_kebutuhanharian"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_elektronik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_main_menu_elektronik"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_elektronik"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_elektronik"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_elektronik" />
+
+                    <!--Top-up dan Tagihan-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_bills"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_main_menu"
+                        android:src="@drawable/ic_tokped_topup_dan_tagihan"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_bills"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_keuangan"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_elektronik"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_bills"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_main_menu_bills"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_bills"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_bills"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_bills" />
+
+                    <!--Keuangan-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_keuangan"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_main_menu"
+                        android:src="@drawable/ic_tokped_keuangan"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_keuangan"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_stationery"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_bills"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_keuangan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_main_menu_keuangan"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_keuangan"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_keuangan"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_keuangan" />
+
+                    <!--ATK-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_stationery"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_main_menu"
+                        android:src="@drawable/ic_tokped_office_dan_stationery"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_stationery"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_travel"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_keuangan"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_stationery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_main_menu_atk"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_stationery"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_stationery"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_stationery" />
+
+                    <!--Travel ticket-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_travel"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_main_menu"
+                        android:src="@drawable/ic_tokped_travel_dan_entertainment"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_travel"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_party"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_stationery"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_travel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_main_menu_travel"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_travel"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_travel"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_travel" />
+
+                    <!--Party-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_party"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_main_menu"
+                        android:src="@drawable/ic_tokped_perlengkapan_pesta"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_party"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_travel"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_party"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_main_menu_travel"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_party"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_party"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_party" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <!--iklan-->
+            <HorizontalScrollView
+                android:id="@+id/horizontal_iklan"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal_sub_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_main_menu">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_image_iklan_satu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/cv_image_iklan_dua"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/image_iklan_satu"
+                            android:layout_width="382dp"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/cd_gambar_iklan"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/test_iklan" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_image_iklan_dua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/cv_image_iklan_satu"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/image_iklan_dua"
+                            android:layout_width="382dp"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/cd_gambar_iklan"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/test_iklan" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <!--sub menu-->
+            <HorizontalScrollView
+                android:id="@+id/horizontal_sub_menu"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintBottom_toTopOf="@id/text_judul_live_video"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_iklan">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <!--peduli lindungi-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_pedulilindungi"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="15dp"
+                        android:contentDescription="@string/cd_icon_sub_menu"
+                        android:src="@drawable/ic_peduli_lindungi"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_pedulilindungi"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_lokal"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_pedulilindungi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_submenu_pedulilindungi"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_pedulilindungi"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_pedulilindungi"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_pedulilindungi" />
+
+                    <!--lokal mantap-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_lokal"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_sub_menu"
+                        android:src="@drawable/ic_tokped_lokal"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_lokal"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_bazar"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_pedulilindungi"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_lokal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_submenu_banggalokal"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_lokal"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_lokal"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_lokal" />
+
+                    <!--bazar-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_bazar"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_sub_menu"
+                        android:src="@drawable/ic_tokped_bazar"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_bazar"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_liveshop"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_lokal"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_bazar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_submenu_bazar"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_bazar"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_bazar"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_bazar" />
+
+                    <!--liveshopping-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_liveshop"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_sub_menu"
+                        android:src="@drawable/ic_tokped_live_shopping"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_lokal"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_tokpedseru"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_bazar"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_liveshop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_submenu_liveshop"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_liveshop"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_liveshop"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_liveshop" />
+
+                    <!--tokopedia seru-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_tokpedseru"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_sub_menu"
+                        android:src="@drawable/ic_tokped_seru"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_lokal"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_cod"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_liveshop"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_tokpedseru"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_submenu_tokpedseru"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_tokpedseru"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_tokpedseru"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_tokpedseru" />
+
+                    <!--cod-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_cod"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:contentDescription="@string/cd_icon_sub_menu"
+                        android:src="@drawable/ic_tokped_cod"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_lokal"
+                        app:layout_constraintEnd_toStartOf="@id/image_main_menu_liveshop"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_tokpedseru"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_cod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_submenu_cod"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_cod"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_cod"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_cod" />
+
+                    <!--promo sekitar-->
+                    <ImageView
+                        android:id="@+id/image_main_menu_promo_sekitar"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="15dp"
+                        android:contentDescription="@string/cd_icon_sub_menu"
+                        android:src="@drawable/ic_tokped_location"
+                        app:layout_constraintBottom_toTopOf="@id/text_main_menu_lokal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/image_main_menu_cod"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:tint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/text_main_menu_promo_sekitar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_submenu_promosekitar"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/image_main_menu_promo_sekitar"
+                        app:layout_constraintStart_toStartOf="@id/image_main_menu_promo_sekitar"
+                        app:layout_constraintTop_toBottomOf="@id/image_main_menu_promo_sekitar" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <!--judul live video-->
+            <TextView
+                android:id="@+id/text_judul_live_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/text_judul_livevideo"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/horizontal_live_video"
+                app:layout_constraintEnd_toStartOf="@id/text_judul_live_video_ijo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_sub_menu" />
+
+            <TextView
+                android:id="@+id/text_judul_live_video_ijo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="@string/text_judul_livevideo_ijo"
+                android:textAlignment="viewEnd"
+                app:layout_constraintBottom_toBottomOf="@id/text_judul_live_video"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_judul_live_video"
+                app:layout_constraintTop_toTopOf="@id/text_judul_live_video" />
+
+            <!--live video-->
+            <HorizontalScrollView
+                android:id="@+id/horizontal_live_video"
+                android:layout_width="0dp"
+                android:layout_height="254dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal_diskon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_judul_live_video">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/live_video_satu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="20dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/live_video_dua"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="128dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/test_iklan"
+                            android:contentDescription="@string/cd_gambar_live_video" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/live_video_dua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="15dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/live_video_tiga"
+                        app:layout_constraintStart_toEndOf="@id/live_video_satu"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="128dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/test_iklan"
+                            android:contentDescription="@string/cd_gambar_live_video"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/live_video_tiga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="20dp"
+                        app:cardCornerRadius="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/live_video_dua"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:layout_width="128dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/test_iklan"
+                            android:contentDescription="@string/cd_gambar_live_video" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+
+            <!--diskon-->
+            <HorizontalScrollView
+                android:id="@+id/horizontal_diskon"
+                android:layout_width="0dp"
+                android:layout_height="254dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_live_video">
+
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+    <!--guideline navbar-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_navbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+    <!--navbar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_navbar">
+
+        <ImageView
+            android:id="@+id/image_tokped_navbar_home"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_tokped_home"
+            app:layout_constraintBottom_toTopOf="@id/tokped_navbar_home"
+            app:layout_constraintEnd_toStartOf="@id/image_tokped_navbar_feed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/buabu_navbar"
+            android:contentDescription="@string/cd_icon_navbar"/>
+
+        <TextView
+            android:id="@+id/tokped_navbar_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tokped_navbar_home"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_home"
+            app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_home"
+            app:layout_constraintTop_toBottomOf="@id/image_tokped_navbar_home" />
+
+        <ImageView
+            android:id="@+id/image_tokped_navbar_feed"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_navbar_feed"
+            app:layout_constraintBottom_toTopOf="@id/tokped_navbar_feed"
+            app:layout_constraintEnd_toStartOf="@id/image_tokped_navbar_officialstore"
+            app:layout_constraintStart_toEndOf="@id/image_tokped_navbar_home"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/buabu_navbar"
+            android:contentDescription="@string/cd_icon_navbar"/>
+
+        <TextView
+            android:id="@+id/tokped_navbar_feed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_navbar_tokped_feed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_feed"
+            app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_feed"
+            app:layout_constraintTop_toBottomOf="@id/image_tokped_navbar_feed" />
+
+        <ImageView
+            android:id="@+id/image_tokped_navbar_officialstore"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_tokped_official_store"
+            app:layout_constraintBottom_toTopOf="@id/tokped_navbar_officialstore"
+            app:layout_constraintEnd_toStartOf="@id/image_tokped_navbar_wishlist"
+            app:layout_constraintStart_toEndOf="@id/image_tokped_navbar_feed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/buabu_navbar"
+            android:contentDescription="@string/cd_icon_navbar"/>
+
+        <TextView
+            android:id="@+id/tokped_navbar_officialstore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_navbar_officialstore"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_officialstore"
+            app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_officialstore"
+            app:layout_constraintTop_toBottomOf="@id/image_tokped_navbar_officialstore" />
+
+        <ImageView
+            android:id="@+id/image_tokped_navbar_wishlist"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_tokped_lokal"
+            app:layout_constraintBottom_toTopOf="@id/tokped_navbar_officialstore"
+            app:layout_constraintEnd_toStartOf="@id/image_tokped_navbar_transaksi"
+            app:layout_constraintStart_toEndOf="@id/image_tokped_navbar_officialstore"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/buabu_navbar"
+            android:contentDescription="@string/cd_icon_navbar"/>
+
+        <TextView
+            android:id="@+id/tokped_navbar_wishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_tokped_navbar_wishlist"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_wishlist"
+            app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_wishlist"
+            app:layout_constraintTop_toBottomOf="@id/image_tokped_navbar_wishlist" />
+
+        <ImageView
+            android:id="@+id/image_tokped_navbar_transaksi"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_tokped_topup_dan_tagihan"
+            app:layout_constraintBottom_toTopOf="@id/tokped_navbar_transaksi"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_tokped_navbar_wishlist"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/buabu_navbar"
+            android:contentDescription="@string/cd_icon_navbar"/>
+
+        <TextView
+            android:id="@+id/tokped_navbar_transaksi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_navbar_tokped_transaksi"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_transaksi"
+            app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_transaksi"
+            app:layout_constraintTop_toBottomOf="@id/image_tokped_navbar_transaksi"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

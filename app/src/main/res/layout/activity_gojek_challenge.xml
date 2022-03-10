@@ -57,6 +57,7 @@
         android:id="@+id/scroll_body_gojek"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@id/guideline_navbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +69,7 @@
             android:layout_marginTop="12dp">
             <!--menu balance-->
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraint_balance"
+                android:id="@+id/cardview_balance"
                 android:layout_width="match_parent"
                 android:layout_height="96dp"
                 android:layout_marginStart="12dp"
@@ -101,9 +102,9 @@
                             android:layout_marginBottom="12dp"
                             android:background="@drawable/shape_balance_gopay"
                             app:layout_constraintBottom_toTopOf="@id/constraint_balance_paylater"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
+                            app:layout_constraintTop_toTopOf="parent">
                             <!--pengennya slider, tapi pake scrollview + padding aja deh-->
                             <ImageView
                                 android:id="@+id/image_icon_judul_balance_gocoins"
@@ -144,9 +145,9 @@
                             android:layout_marginStart="12dp"
                             android:background="@drawable/shape_balance_gopay"
                             app:layout_constraintBottom_toTopOf="@id/constraint_balance_gopay"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/constraint_balance_gocoins"
-                            app:layout_constraintEnd_toEndOf="parent">
+                            app:layout_constraintTop_toBottomOf="@id/constraint_balance_gocoins">
                             <!--pengennya slider, tapi pake scrollview + padding aja deh-->
                             <ImageView
                                 android:id="@+id/image_icon_judul_balance_paylater"
@@ -190,9 +191,9 @@
                             android:layout_marginBottom="12dp"
                             android:background="@drawable/shape_balance_gopay"
                             app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/constraint_balance_paylater"
-                            app:layout_constraintEnd_toEndOf="parent">
+                            app:layout_constraintTop_toBottomOf="@id/constraint_balance_paylater">
                             <!--pengennya slider, tapi pake scrollview + padding aja deh-->
                             <ImageView
                                 android:id="@+id/image_icon_judul_balance_gopay"
@@ -329,9 +330,9 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="12dp"
-                app:layout_constraintEnd_toEndOf="@id/constraint_balance"
-                app:layout_constraintStart_toStartOf="@id/constraint_balance"
-                app:layout_constraintTop_toBottomOf="@id/constraint_balance">
+                app:layout_constraintEnd_toEndOf="@id/cardview_balance"
+                app:layout_constraintStart_toStartOf="@id/cardview_balance"
+                app:layout_constraintTop_toBottomOf="@id/cardview_balance">
                 <!--main menu baris satu-->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraint_main_menu_baris_satu"
@@ -733,7 +734,8 @@
                 android:background="@drawable/shape_iklan_gojek"
                 app:layout_constraintEnd_toEndOf="@id/constraint_akses_cepat"
                 app:layout_constraintStart_toStartOf="@id/constraint_akses_cepat"
-                app:layout_constraintTop_toBottomOf="@id/constraint_akses_cepat">
+                app:layout_constraintTop_toBottomOf="@id/constraint_akses_cepat"
+                app:layout_constraintBottom_toBottomOf="parent">
 
                 <ImageView
                     android:id="@+id/image_iklan"
@@ -753,7 +755,6 @@
                     android:layout_width="0dp"
                     android:layout_height="48dp"
                     android:layout_margin="12dp"
-
                     android:text="@string/text_iklan"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

@@ -6,11 +6,12 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
     <color name="ijo_gojek">#BB01A512</color>
     <color name="biruu_gojek">#0081a0</color>
     <color name="buabu_icon_balance_gojek">#606060</color>
     <color name="oren_harta_karun_gojek">#FFD4A7</color>
     <color name="garis_akses_cepat">#efefef</color>
     <color name="buabu_navbar">#a0a0a0</color>
+    <color name="tokped_ijo_toolbar">#63CF6A</color>
 </resources>

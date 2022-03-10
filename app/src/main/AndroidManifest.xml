@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChallengeChapterDua">
         <activity
+            android:name=".TokopediaChallenge"
+            android:exported="false" />
+        <activity
             android:name=".GojekChallenge"
             android:exported="false" />
         <activity

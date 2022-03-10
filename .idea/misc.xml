@@ -24,11 +24,20 @@
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_jam_pasir.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_lainnya.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_navbar_chat.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_panah_kanan_club.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_peduli_lindungi.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_pesanan.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_restoran_akses_cepat.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_rocket_explore.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_rocket_explore_16.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_tokped_arrow_down.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_tokped_bazar.xml" value="0.158" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_tokped_elektronik.xml" value="0.222" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_tokped_location.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_tokped_official_store.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_tokped_travel_dan_entertainment.xml" value="0.172" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_tokped_wallet_balance.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/ic_wallet_balance.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/shape_akses_cepat.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/shape_balance_gojek.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/shape_balance_icon_gojek.xml" value="0.1885" />
@@ -36,10 +45,15 @@
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/shape_gambar_iklan.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/shape_iklan_gojek.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/shape_menu_harta_karun.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/shape_search_bar_gojek.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/tokped_shape_balance.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/tokped_shape_search_toolbar.xml" value="0.1885" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/drawable/tokped_shape_toolbar.xml" value="0.1885" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/layout-v31/activity_gojek_challenge.xml" value="0.25" />
-        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/layout/activity_gojek_challenge.xml" value="0.152" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/layout/activity_gojek_challenge.xml" value="0.1" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/layout/activity_recycler_balance.xml" value="0.25" />
+        <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/layout/activity_tokopedia_challenge.xml" value="0.176" />
         <entry key="..\:/Users/Hussain/AndroidStudioProjects/ChallengeChapterDua/app/src/main/res/layout/card_view_balance.xml" value="0.1" />
         <entry key="..\:/useful/KAMPUS_MERDEKA/Binar/Materi/Chapter2/ChallengeChapterDua/app/src/main/res/drawable/ic_account_48.xml" value="0.1885" />
         <entry key="..\:/useful/KAMPUS_MERDEKA/Binar/Materi/Chapter2/ChallengeChapterDua/app/src/main/res/drawable/shape_root_layout.xml" value="0.1885" />

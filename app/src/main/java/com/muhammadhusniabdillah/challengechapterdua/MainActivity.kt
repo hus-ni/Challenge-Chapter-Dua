@@ -17,6 +17,8 @@ class MainActivity : AppCompatActivity() {
         binding.buttonMainGojek.setOnClickListener {
             startActivity(Intent(this, GojekChallenge::class.java))
         }
-//        binding.buttonMainTokped
+        binding.buttonMainTokped.setOnClickListener {
+            startActivity(Intent(this, TokopediaChallenge::class.java))
+        }
     }
 }
