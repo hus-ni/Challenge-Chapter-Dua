@@ -87,4 +87,8 @@
     <string name="cd_icon_sub_menu">icon sub menu</string>
     <string name="cd_gambar_live_video">gambar live video</string>
     <string name="cd_icon_navbar">icon navbar</string>
+    <string name="text_tokped_kejar_diskon">Kejar Diskon</string>
+    <string name="text_tokped_berakhir_dalam">Berakhir dalam</string>
+    <string name="text_tokped_jam_diskon">09 menit 26 detik</string>
+    <string name="cd_image_diskon_tokped">image diskon</string>
 </resources>

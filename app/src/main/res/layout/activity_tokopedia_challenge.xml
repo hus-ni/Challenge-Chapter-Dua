@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TokopediaChallenge">
+    tools:context=".TokopediaChallenge"
+    tools:ignore="TooManyViews">
     <!--guideline toolbar-->
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline_toolbar"
@@ -100,6 +101,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/guideline_navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline_toolbar">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -140,7 +143,6 @@
                     android:layout_height="40dp"
                     android:layout_marginStart="24dp"
                     android:layout_marginEnd="24dp"
-
                     app:cardCornerRadius="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -187,7 +189,7 @@
                 android:id="@+id/horizontal_main_menu"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="12dp"
                 app:layout_constraintBottom_toTopOf="@id/horizontal_iklan"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -669,11 +671,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="24dp"
                 android:text="@string/text_judul_livevideo"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/horizontal_live_video"
+                app:layout_constraintBottom_toTopOf="@id/horizontal_live_video"
                 app:layout_constraintEnd_toStartOf="@id/text_judul_live_video_ijo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/horizontal_sub_menu" />
@@ -696,7 +698,7 @@
                 android:layout_width="0dp"
                 android:layout_height="254dp"
                 android:layout_marginTop="12dp"
-                app:layout_constraintBottom_toTopOf="@id/horizontal_diskon"
+                app:layout_constraintBottom_toTopOf="@id/text_judul_diskon_tokped"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_judul_live_video">
@@ -765,16 +767,150 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
 
+            <!--judul diskon-->
+            <TextView
+                android:id="@+id/text_judul_diskon_tokped"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/text_tokped_kejar_diskon"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/text_judul_diskon_tokped_dua"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/horizontal_live_video" />
+            <!--judul diskon-->
+            <TextView
+                android:id="@+id/text_judul_diskon_tokped_dua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_tokped_berakhir_dalam"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@id/horizontal_diskon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_judul_diskon_tokped" />
+            <!--judul diskon-->
+            <TextView
+                android:id="@+id/text_judul_diskon_tokped_jam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_jam_diskon_tokped"
+                android:drawablePadding="4dp"
+                android:padding="4dp"
+                android:text="@string/text_tokped_jam_diskon"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/ic_jam_diskon_tokped"
+                app:layout_constraintBottom_toBottomOf="@id/text_judul_diskon_tokped_dua"
+                app:layout_constraintStart_toEndOf="@id/text_judul_diskon_tokped"
+                app:layout_constraintTop_toTopOf="@id/text_judul_diskon_tokped_dua" />
+            <!--judul diskon-->
+            <TextView
+                android:id="@+id/text_judul_diskon_tokped_lihat_semua"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:text="@string/text_judul_livevideo_ijo"
+                android:textAlignment="viewEnd"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/text_judul_diskon_tokped_jam"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/text_judul_diskon_tokped_jam"
+                app:layout_constraintTop_toTopOf="@id/text_judul_diskon_tokped_jam"
+                tools:ignore="RtlSymmetry" />
+
             <!--diskon-->
             <HorizontalScrollView
                 android:id="@+id/horizontal_diskon"
                 android:layout_width="0dp"
                 android:layout_height="254dp"
                 android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/horizontal_live_video">
+                app:layout_constraintTop_toBottomOf="@id/text_judul_diskon_tokped_dua">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#00adcb">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/image_diskon_nol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="18dp"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/image_diskon_satu"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_width="118dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:contentDescription="@string/cd_image_diskon_tokped"
+                            android:src="@drawable/diskon_nol_tokped" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/image_diskon_satu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="18dp"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/image_diskon_dua"
+                        app:layout_constraintStart_toEndOf="@id/image_diskon_nol"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_width="118dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:contentDescription="@string/cd_image_diskon_tokped"
+                            android:src="@drawable/diskon_satu_tokped" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/image_diskon_dua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="18dp"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/image_diskon_tiga"
+                        app:layout_constraintStart_toEndOf="@id/image_diskon_satu"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_width="118dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:contentDescription="@string/cd_image_diskon_tokped"
+                            android:src="@drawable/diskon_dua_tokped"
+                            />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/image_diskon_tiga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:cardCornerRadius="18dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/image_diskon_dua"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <ImageView
+                            android:layout_width="118dp"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerInside"
+                            android:contentDescription="@string/cd_image_diskon_tokped"
+                            android:src="@drawable/diskon_tiga_tokped" />
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </HorizontalScrollView>
 
