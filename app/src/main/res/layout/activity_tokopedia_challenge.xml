@@ -121,12 +121,12 @@
                     android:id="@+id/text_alamat_toolbar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
                     android:fontFamily="sans-serif"
                     android:text="@string/text_alamat_toolbar"
                     android:textAlignment="viewStart"
                     android:textColor="@color/white"
                     android:textSize="12sp"
-                    android:layout_marginBottom="4dp"
                     app:drawableEndCompat="@drawable/ic_tokped_arrow_down"
                     app:drawableStartCompat="@drawable/ic_tokped_location"
                     app:layout_constraintBottom_toTopOf="@id/cardview_balance"
@@ -181,6 +181,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <!--main menu-->
             <HorizontalScrollView
                 android:id="@+id/horizontal_main_menu"
@@ -447,7 +448,7 @@
                             android:layout_height="match_parent"
                             android:contentDescription="@string/cd_gambar_iklan"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/test_iklan" />
+                            android:src="@drawable/iklan_horizon_tokped" />
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -468,7 +469,7 @@
                             android:layout_height="match_parent"
                             android:contentDescription="@string/cd_gambar_iklan"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/test_iklan" />
+                            android:src="@drawable/iklan_horizon_tokped" />
                     </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
@@ -676,7 +677,7 @@
                 app:layout_constraintEnd_toStartOf="@id/text_judul_live_video_ijo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/horizontal_sub_menu" />
-
+            <!--judul live video-->
             <TextView
                 android:id="@+id/text_judul_live_video_ijo"
                 android:layout_width="0dp"
@@ -699,11 +700,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text_judul_live_video">
-
+                <!--wadah live video-->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent">
-
+                    <!--live video satu-->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/live_video_satu"
                         android:layout_width="wrap_content"
@@ -720,9 +721,9 @@
                             android:layout_height="match_parent"
                             android:contentDescription="@string/cd_gambar_live_video"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/test_iklan" />
+                            android:src="@drawable/live_video_tokped_satu" />
                     </androidx.cardview.widget.CardView>
-
+                    <!--live video dua-->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/live_video_dua"
                         android:layout_width="wrap_content"
@@ -739,9 +740,9 @@
                             android:layout_height="match_parent"
                             android:contentDescription="@string/cd_gambar_live_video"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/test_iklan" />
+                            android:src="@drawable/live_video_tokped_dua" />
                     </androidx.cardview.widget.CardView>
-
+                    <!--live video tiga-->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/live_video_tiga"
                         android:layout_width="wrap_content"
@@ -759,7 +760,7 @@
                             android:layout_height="match_parent"
                             android:contentDescription="@string/cd_gambar_live_video"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/test_iklan" />
+                            android:src="@drawable/live_video_tokped_tiga" />
                     </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
