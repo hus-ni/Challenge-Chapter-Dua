@@ -15,4 +15,5 @@
     <color name="buabu_navbar">#a0a0a0</color>
     <color name="tokped_ijo_toolbar">#63CF6A</color>
     <color name="jam_diskon_tokped">#CA1D68</color>
+    <color name="biru_bg_diskon_tokped">#00adcb</color>
 </resources>
