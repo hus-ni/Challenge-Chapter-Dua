@@ -11,7 +11,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.13" />
+        app:layout_constraintGuide_percent="0.07" />
     <!--toolbar-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_toolbar"
@@ -26,15 +26,13 @@
         <SearchView
             android:id="@+id/search_toolbar"
             android:layout_width="232dp"
-            android:layout_height="0dp"
+            android:layout_height="32dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             android:background="@drawable/tokped_shape_search_toolbar"
             android:iconifiedByDefault="false"
             android:queryBackground="@android:color/transparent"
             android:queryHint="Cari ayang"
-            app:layout_constraintBottom_toTopOf="@id/text_alamat_toolbar"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/message_toolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -95,68 +93,7 @@
             app:layout_constraintStart_toEndOf="@id/cart_toolbar"
             app:layout_constraintTop_toTopOf="@id/search_toolbar" />
 
-        <TextView
-            android:id="@+id/text_alamat_toolbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="35dp"
-            android:fontFamily="sans-serif"
-            android:text="@string/text_alamat_toolbar"
-            android:textAlignment="viewStart"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            app:drawableEndCompat="@drawable/ic_tokped_arrow_down"
-            app:drawableStartCompat="@drawable/ic_tokped_location"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@id/search_toolbar"
-            app:layout_constraintTop_toBottomOf="@id/search_toolbar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <!--balance-->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardview_balance"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        app:cardCornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_toolbar"
-        app:layout_constraintEnd_toEndOf="@id/constraint_toolbar"
-        app:layout_constraintStart_toStartOf="@id/constraint_toolbar"
-        app:layout_constraintTop_toBottomOf="@id/guideline_toolbar">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp">
-
-            <TextView
-                android:id="@+id/text_wallet_balance"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:drawablePadding="10dp"
-                android:fontFamily="sans-serif"
-                android:text="@string/text_wallet_balance"
-                app:drawableStartCompat="@drawable/ic_tokped_wallet_balance"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/text_membership_balance"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/text_membership_balance"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:drawablePadding="10dp"
-                android:fontFamily="sans-serif"
-                android:text="@string/text_tokped_member_balance"
-                app:drawableStartCompat="@drawable/ic_tokped_gold_member"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/text_wallet_balance"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
     <!--scrollview body-->
     <ScrollView
         android:id="@+id/scrollview_body"
@@ -167,17 +104,93 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="28dp">
+            android:layout_height="wrap_content">
+
+            <!--balance and address-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_balance_address"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:background="@drawable/ic_tokped_balance_bg"
+                app:layout_constraintBottom_toTopOf="@id/horizontal_main_menu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_alamat_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/text_alamat_toolbar"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="4dp"
+                    app:drawableEndCompat="@drawable/ic_tokped_arrow_down"
+                    app:drawableStartCompat="@drawable/ic_tokped_location"
+                    app:layout_constraintBottom_toTopOf="@id/cardview_balance"
+                    app:layout_constraintStart_toStartOf="@id/cardview_balance"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--balance-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_balance"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_alamat_toolbar">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/text_wallet_balance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/text_wallet_balance"
+                            app:drawableStartCompat="@drawable/ic_tokped_wallet_balance"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/text_membership_balance"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_membership_balance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/text_tokped_member_balance"
+                            app:drawableStartCompat="@drawable/ic_tokped_gold_member"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/text_wallet_balance"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
             <!--main menu-->
             <HorizontalScrollView
                 android:id="@+id/horizontal_main_menu"
                 android:layout_width="0dp"
                 android:layout_height="100dp"
+                android:layout_marginTop="6dp"
                 app:layout_constraintBottom_toTopOf="@id/horizontal_iklan"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/constraint_balance_address">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="wrap_content"
@@ -705,9 +718,9 @@
                         <ImageView
                             android:layout_width="128dp"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/cd_gambar_live_video"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/test_iklan"
-                            android:contentDescription="@string/cd_gambar_live_video" />
+                            android:src="@drawable/test_iklan" />
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -724,9 +737,9 @@
                         <ImageView
                             android:layout_width="128dp"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/cd_gambar_live_video"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/test_iklan"
-                            android:contentDescription="@string/cd_gambar_live_video"/>
+                            android:src="@drawable/test_iklan" />
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
@@ -744,9 +757,9 @@
                         <ImageView
                             android:layout_width="128dp"
                             android:layout_height="match_parent"
+                            android:contentDescription="@string/cd_gambar_live_video"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/test_iklan"
-                            android:contentDescription="@string/cd_gambar_live_video" />
+                            android:src="@drawable/test_iklan" />
                     </androidx.cardview.widget.CardView>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
@@ -778,6 +791,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -785,21 +800,22 @@
 
         <ImageView
             android:id="@+id/image_tokped_navbar_home"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/cd_icon_navbar"
             android:src="@drawable/ic_tokped_home"
             app:layout_constraintBottom_toTopOf="@id/tokped_navbar_home"
             app:layout_constraintEnd_toStartOf="@id/image_tokped_navbar_feed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/buabu_navbar"
-            android:contentDescription="@string/cd_icon_navbar"/>
+            app:tint="@color/buabu_navbar" />
 
         <TextView
             android:id="@+id/tokped_navbar_home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_tokped_navbar_home"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_home"
             app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_home"
@@ -807,21 +823,22 @@
 
         <ImageView
             android:id="@+id/image_tokped_navbar_feed"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/cd_icon_navbar"
             android:src="@drawable/ic_navbar_feed"
             app:layout_constraintBottom_toTopOf="@id/tokped_navbar_feed"
             app:layout_constraintEnd_toStartOf="@id/image_tokped_navbar_officialstore"
             app:layout_constraintStart_toEndOf="@id/image_tokped_navbar_home"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/buabu_navbar"
-            android:contentDescription="@string/cd_icon_navbar"/>
+            app:tint="@color/buabu_navbar" />
 
         <TextView
             android:id="@+id/tokped_navbar_feed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_navbar_tokped_feed"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_feed"
             app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_feed"
@@ -829,21 +846,22 @@
 
         <ImageView
             android:id="@+id/image_tokped_navbar_officialstore"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/cd_icon_navbar"
             android:src="@drawable/ic_tokped_official_store"
             app:layout_constraintBottom_toTopOf="@id/tokped_navbar_officialstore"
             app:layout_constraintEnd_toStartOf="@id/image_tokped_navbar_wishlist"
             app:layout_constraintStart_toEndOf="@id/image_tokped_navbar_feed"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/buabu_navbar"
-            android:contentDescription="@string/cd_icon_navbar"/>
+            app:tint="@color/buabu_navbar" />
 
         <TextView
             android:id="@+id/tokped_navbar_officialstore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_navbar_officialstore"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_officialstore"
             app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_officialstore"
@@ -851,21 +869,22 @@
 
         <ImageView
             android:id="@+id/image_tokped_navbar_wishlist"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/cd_icon_navbar"
             android:src="@drawable/ic_tokped_lokal"
             app:layout_constraintBottom_toTopOf="@id/tokped_navbar_officialstore"
             app:layout_constraintEnd_toStartOf="@id/image_tokped_navbar_transaksi"
             app:layout_constraintStart_toEndOf="@id/image_tokped_navbar_officialstore"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/buabu_navbar"
-            android:contentDescription="@string/cd_icon_navbar"/>
+            app:tint="@color/buabu_navbar" />
 
         <TextView
             android:id="@+id/tokped_navbar_wishlist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_tokped_navbar_wishlist"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_wishlist"
             app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_wishlist"
@@ -873,26 +892,26 @@
 
         <ImageView
             android:id="@+id/image_tokped_navbar_transaksi"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/cd_icon_navbar"
             android:src="@drawable/ic_tokped_topup_dan_tagihan"
             app:layout_constraintBottom_toTopOf="@id/tokped_navbar_transaksi"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/image_tokped_navbar_wishlist"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/buabu_navbar"
-            android:contentDescription="@string/cd_icon_navbar"/>
+            app:tint="@color/buabu_navbar" />
 
         <TextView
             android:id="@+id/tokped_navbar_transaksi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text_navbar_tokped_transaksi"
+            android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/image_tokped_navbar_transaksi"
             app:layout_constraintStart_toStartOf="@id/image_tokped_navbar_transaksi"
-            app:layout_constraintTop_toBottomOf="@id/image_tokped_navbar_transaksi"
-            />
+            app:layout_constraintTop_toBottomOf="@id/image_tokped_navbar_transaksi" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
